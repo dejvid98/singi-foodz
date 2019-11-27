@@ -1,0 +1,116 @@
+.img {
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  filter: brightness(50%);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.title {
+  font-family: "Lobster", cursive;
+  color: #ff4136;
+  font-size: 8rem;
+  padding: none;
+  margin: none;
+  position: relative;
+  bottom: 0%;
+}
+
+.form-container {
+  position: absolute;
+  left: 37%;
+  margin: 0%;
+}
+
+.form {
+  background-color: rgba(196, 196, 196, 1);
+  bottom: 30%;
+  border-radius: 8rem;
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex; /* NEW, Spec - Firefox, Chrome, Opera */
+  text-align: center;
+  bottom: 20%;
+
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1.2rem;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.continue {
+  color: #fff !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #ed3330;
+  padding: 12px;
+  border-radius: 80px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+  margin-top: 25px;
+  left: -10px;
+  width: 50%;
+  text-align: center;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.continue:hover {
+  background: #434343;
+  letter-spacing: 1px;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.4s ease 0s;
+}
+
+#back {
+  width: 100px;
+}
+
+#continue {
+  width: 100px;
+}
+
+.list {
+  font-family: "Muli", sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+#starting-progress {
+  margin: 10px;
+  height: 10px;
+  border-radius: 20rem;
+}
+
+.acept {
+  text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.input-fields {
+  position: relative;
+  left: 20%;
+}
+
+.form-text {
+  text-align: center;
+  display: inline-block;
+  position: relative;
+}
+
+.dialog {
+  background-color: rgba(196, 196, 196, 1);
+  text-align: center;
+  display: inline-block;
+}

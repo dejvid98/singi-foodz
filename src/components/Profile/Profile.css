@@ -1,0 +1,107 @@
+.containera {
+  margin-right: auto;
+  margin-left: auto;
+  height: 43rem;
+  max-width: 1110px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  padding-right: 10px;
+  padding-left: 10px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.footer-profile {
+  background-color: rgba(35, 43, 43, 10);
+  padding: 0px;
+  margin: 0px;
+  width: 69.6rem;
+  left: -0.7rem;
+  position: relative;
+  border-bottom-left-radius: 20rem;
+  border-bottom-right-radius: 20rem;
+  text-align: center;
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  bottom: -0.8rem;
+}
+
+.edit{
+  position: relative;
+  left: 18rem;
+  bottom: 5.6rem;
+}
+
+.confirm{
+  position: relative;
+  left: 18rem;
+  bottom: 5.6rem;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 960px;
+  padding-top: 0%;
+  position: relative;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.info {
+  position: absolute;
+  left: 65%;
+  bottom: 23%;
+  font-size: 10px;
+  font-weight: bold;
+  margin: none;
+  padding: none;
+}
+
+.info2 {
+  position: absolute;
+  left: 50%;
+  bottom: 25%;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+p {
+  margin-top: 20px;
+}
+
+#pic {
+  background-image: url("../../Assets/Linus.jpg");
+  width: 400px;
+  height: 600px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  padding-top: 20px;
+  border-radius: 50px;
+}
+
+
+
+.textinfo {
+  padding-bottom: 15.7px;
+}
+
+
+
+.selectBox {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1110px;
+  height: 43rem;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  padding-right: 10px;
+  padding-left: 10px;
+  background-color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  font-family: "Lato", sans-serif;
+}
+

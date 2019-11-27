@@ -1,0 +1,203 @@
+.selectBox {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1110px;
+  height: 43rem;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  font-family: "Lato", sans-serif;
+}
+
+.foodbuttons {
+  position: relative;
+  top: -2rem;
+}
+
+.restaurantbox {
+  width: 35rem;
+  height: 6rem;
+  background-color: white;
+  margin-bottom: 2rem;
+  position: relative;
+  text-align: center;
+  left: 45%;
+}
+
+.restaurantpic {
+  width: 5.5rem;
+  height: 5.4rem;
+}
+
+.imagelink{
+  position: relative;
+  left: -14rem;
+  top:-2rem
+}
+
+@-webkit-keyframes hvr-ripple-out {
+  100% {
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0;
+  }
+}
+@keyframes hvr-ripple-out {
+  100% {
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0;
+  }
+}
+.hvr-ripple-out {
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+}
+.hvr-ripple-out:before {
+  content: "";
+  position: absolute;
+  border: #e1e1e1 solid 6px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+.hvr-ripple-out:hover:before,
+.hvr-ripple-out:focus:before,
+.hvr-ripple-out:active:before {
+  -webkit-animation-name: hvr-ripple-out;
+  animation-name: hvr-ripple-out;
+}
+
+.foodbuttons {
+  text-align: left;
+  font-weight: bold;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.filterDivider {
+  position: relative;
+  z-index: 0;
+  width: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 2rem;
+}
+.filterDivider:before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  left: -50%;
+  top: -50%;
+  width: 200%;
+  height: 200%;
+  background-color: rgba(255,65,54,0.65);
+  background-repeat: no-repeat;
+  background-size: 50% 50%, 50% 50%;
+  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+}
+
+.filterDivider:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 6px;
+  top: 6px;
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  background: white;
+  border-radius: 5px;
+}
+
+.footer-pizza {
+  background-color: rgba(35, 43, 43, 10);
+  padding: 0px;
+  margin: 0px;
+  width: 69.6rem;
+  left: -0.7rem;
+  position: relative;
+  border-bottom-left-radius: 20rem;
+  border-bottom-right-radius: 20rem;
+  text-align: center;
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  margin-top: 2rem;
+}
+
+.box {
+  position: relative;
+  top: -1.5rem;
+  left: -1.1rem;
+  transform: translate(-50%, -50%);
+}
+
+.box select {
+  background-color: #0563af;
+  color: white;
+  padding: 12px;
+  width: 250px;
+  border: none;
+  font-size: 20px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  -webkit-appearance: button;
+  appearance: button;
+  outline: none;
+}
+
+.box::before {
+  content: "\f13a";
+  font-family: FontAwesome;
+  position: relative;
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  font-size: 28px;
+  line-height: 45px;
+  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+
+.box:hover::before {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.box select option {
+  padding: 30px;
+}
+
+.restaurantinfo{
+  position: relative;
+  left: 23rem;
+  bottom: 4.2rem;
+}
+
+.pages{
+  text-align: right;
+  position: relative;
+  max-width:  20rem;
+  left: 40rem;
+}
+
+
+
+
+
