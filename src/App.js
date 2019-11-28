@@ -26,6 +26,10 @@ import Bbq3 from './components/Restaurants/Bbq/Bbq3';
 import SushiOrder from './components/Order/SushiOrder';
 import PizzaOrder from './components/Order/PizzaOrder';
 import SandwichOrder from './components/Order/SandwichOrder';
+import PastaOrder from './components/Order/PastaOrder';
+import IndianOrder from './components/Order/IndianOrder';
+import BbqOrder from './components/Order/BbqOrder';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
@@ -194,6 +198,24 @@ class App extends Component {
 					exact={true}
 					path="/restaurants/sandwich/sandwichorder"
 					render={() => <SandwichOrder value={this.state} handleInput={this.handleInput.bind(this)} />}
+				/>
+
+				<Route
+					exact={true}
+					path="/restaurants/pasta/pastaorder"
+					render={() => <PastaOrder value={this.state} handleInput={this.handleInput.bind(this)} />}
+				/>
+
+				<Route
+					exact={true}
+					path="/restaurants/indian/indianorder"
+					render={() => <IndianOrder value={this.state} handleInput={this.handleInput.bind(this)} />}
+				/>
+
+				<Route
+					exact={true}
+					path="/restaurants/bbq/barbequeorder"
+					render={() => <BbqOrder value={this.state} handleInput={this.handleInput.bind(this)} />}
 				/>
 			</Switch>
 		);

@@ -1,194 +1,189 @@
-
-
 .container {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 960px;
-  padding-top: 0%;
-  position: relative;
-  padding-right: 10px;
-  padding-left: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 960px;
+	padding-top: 0%;
+	position: relative;
+	padding-right: 10px;
+	padding-left: 10px;
 }
 
 .background {
-  min-height: 100%;
-  min-width: 1024px;
-  width: 100%;
-  height: auto;
-  filter: brightness(50%);
-  position: fixed;
-  top: 0;
-  left: 0;
+	min-height: 100%;
+	min-width: 1024px;
+	width: 100%;
+	height: auto;
+	filter: brightness(50%);
+	position: fixed;
+	top: 0;
+	left: 0;
 }
 
 .title {
-  font-family: "Lobster", cursive;
-  color: #ff4136;
-  font-size: 8rem;
-  padding: 2px;
-  margin-top: 5px;
-  position: relative;
-  top: 0%;
-  text-align: center;
+	font-family: "Lobster", cursive;
+	color: #ff4136;
+	font-size: 8rem;
+	padding: 2px;
+	margin-top: 5px;
+	position: relative;
+	top: 0%;
+	text-align: center;
 }
 
 .alert {
-  position: relative;
-  width: 100%;
+	position: relative;
+	width: 100%;
 }
 
 .title-box {
-  background-color: rgba(35, 43, 43, 10);
-  padding: 0px;
-  margin: 0px;
-  position: relative;
-  border-top-left-radius: 20rem;
-  border-top-right-radius: 20rem;
-  text-align: center;
-  color: white;
+	background-color: rgba(35, 43, 43, 10);
+	padding: 0px;
+	margin: 0px;
+	position: relative;
+	border-top-left-radius: 20rem;
+	border-top-right-radius: 20rem;
+	text-align: center;
+	color: white;
 }
 
 .menu {
-  padding-left: 5.5rem;
-  padding-right: 5.67rem;
-  padding-top: 10px;
-  padding-bottom: 7px;
-  background-color: #ffdc00;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  color: black;
+	padding-left: 5.5rem;
+	padding-right: 5.67rem;
+	padding-top: 10px;
+	padding-bottom: 7px;
+	background-color: #ffdc00;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	color: black;
 }
 
 .menu:hover {
-  color: #ffffff !important;
-  background: #ff851b;
-  border-color: #f6b93b !important;
-  transition: all 0.4s ease 0s;
-  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
-  text-decoration: none;
+	color: #ffffff !important;
+	background: #ff851b;
+	border-color: #f6b93b !important;
+	transition: all 0.4s ease 0s;
+	text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+	text-decoration: none;
 }
 
 .menu-item {
-  display: inline-block;
-  position: relative;
+	display: inline-block;
+	position: relative;
 }
 
 .text {
-  margin-left: 5px;
+	margin-left: 5px;
 }
 
 .foodbox {
-  position: relative;
-  width: 100%;
+	position: relative;
+	width: 100%;
 }
 
 .selectBox {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 1110px;
-  height: 45rem;
-  position: relative;
-  background-color: rgba(255, 255, 255, 0.4);
-  text-align: center;
-  font-family: "Lato", sans-serif;
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 1110px;
+	height: 45rem;
+	position: relative;
+	background-color: rgba(255, 255, 255, 0.4);
+	text-align: center;
+	font-family: "Lato", sans-serif;
 }
 
 .foodpic {
-  position: relative;
-  width: 20rem;
-  border-radius: 2rem;
-  text-align: center;
-  filter: brightness(40%);
-  transition: all 1s ease;
-  height: 16rem;
+	position: relative;
+	width: 20rem;
+	border-radius: 2rem;
+	text-align: center;
+	filter: brightness(40%);
+	transition: all 1s ease;
+	height: 16rem;
 }
 
 @-webkit-keyframes foodpic {
-  to {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-  }
+	to {
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+	}
 }
 @keyframes foodpic {
-  to {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-  }
+	to {
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+	}
 }
 .foodpic {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-transition-duration: 0.6s;
-  transition-duration: 0.6s;
-  -webkit-transition-property: transform;
-  transition-property: transform;
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	-webkit-transition-duration: 0.6s;
+	transition-duration: 0.6s;
+	-webkit-transition-property: transform;
+	transition-property: transform;
 }
 .foodpic:hover,
 .foodpic:focus,
 .foodpic:active {
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
-  filter: brightness(100%);
+	-webkit-transform: scale(1.2);
+	transform: scale(1.2);
+	filter: brightness(100%);
 }
 
 .foodname {
-  background-color: transparent;
-  color: white;
-  font-size: 30px;
-  padding: 16px 32px;
+	background-color: transparent;
+	color: white;
+	font-size: 30px;
 }
 
 .foodname:hover {
-  text-decoration: none;
-  color: white;
+	text-decoration: none;
+	color: white;
 }
 
 .middle {
-  transition: 0.5s ease;
-  opacity: 1;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
+	transition: 0.5s ease;
+	opacity: 1;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	text-align: center;
 }
 
 .containa {
-  opacity: 1;
-  margin-bottom: 55px;
+	opacity: 1;
+	margin-bottom: 55px;
 }
 
 .footer-home {
-  background-color: rgba(35, 43, 43, 10);
-  padding: 0px;
-  margin: 0px;
-  width: 69.6rem;
-  left: -0.7rem;
-  position: relative;
-  border-bottom-left-radius: 20rem;
-  border-bottom-right-radius: 20rem;
-  text-align: center;
-  color: white;
-  font-family: "Lato", sans-serif;
-  font-size: 18px;
-  margin-top: -2.1rem;
+	background-color: rgba(35, 43, 43, 10);
+	padding: 0px;
+	margin: 0px;
+	width: 69.6rem;
+	left: -0.7rem;
+	position: relative;
+	border-bottom-left-radius: 20rem;
+	border-bottom-right-radius: 20rem;
+	text-align: center;
+	color: white;
+	font-family: "Lato", sans-serif;
+	font-size: 18px;
+	margin-top: -2.1rem;
 }
 
-
-
 .icons {
-  margin-right: 25px;
+	margin-right: 25px;
 }
 
 #instagram {
-  color: #d6249f;
+	color: #d6249f;
 }
 
 #rss {
-  color: orange;
+	color: orange;
 }

@@ -66,6 +66,8 @@ export default function SimpleModal(props) {
 	const handleCart = () => {
 		props.handleCart(props.foodName,price,quantity)
 		handleClose();
+		setPrice(props.price);
+		setQuantity(1);
 	}
 
 	return (

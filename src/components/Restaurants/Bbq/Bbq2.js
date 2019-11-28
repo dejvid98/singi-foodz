@@ -39,7 +39,7 @@ class Pizza extends Component {
             <Grid item xs={4}>
               <div>
                 {RestaurantList.map(restaurant => {
-                  let link = `/restaurants/sushi/${restaurant.food}order`;
+                  let link = `/restaurants/bbq/${restaurant.food}order`;
                   return (
                     <Restaurant
                       key={restaurant.name}

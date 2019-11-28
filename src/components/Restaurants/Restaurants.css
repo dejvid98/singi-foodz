@@ -25,14 +25,14 @@
 }
 
 .restaurantpic {
-  width: 5.5rem;
-  height: 5.4rem;
+  width: 5.7rem;
+  height: 5.2rem;
 }
 
 .imagelink{
   position: relative;
-  left: -14rem;
-  top:-2rem
+  left: -14.3rem;
+  top:-1.85rem
 }
 
 @-webkit-keyframes hvr-ripple-out {
