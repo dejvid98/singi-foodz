@@ -27,7 +27,7 @@ export default function Order(props) {
 		<div>
 			<Header />
 			<div className="selectBox">
-				<h1>Grill 51</h1>
+				<h1>Grill 51 Bar</h1>
 				<br />
 				<Grid container spacing={6}>
 					<Grid item xs={4}>
