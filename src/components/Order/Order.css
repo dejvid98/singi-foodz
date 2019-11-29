@@ -29,24 +29,6 @@
 }
 
 
-.footer-order-menu {
-	background-color: rgba(35, 43, 43, 10);
-	padding: 0px;
-	margin: 0px;
-	width: 69.6rem;
-	left: -0.7rem;
-	position: relative;
-	border-bottom-left-radius: 20rem;
-	border-bottom-right-radius: 20rem;
-	text-align: center;
-	color: white;
-	font-family: "Lato", sans-serif;
-	font-size: 18px;
-	margin-top: 2rem;
-	bottom: 0.35rem;
-}
-
-
 .menu-item-container {
 	display: inline-block;
 	vertical-align: middle;
