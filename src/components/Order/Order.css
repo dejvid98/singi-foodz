@@ -28,6 +28,12 @@
 	height: 10rem;
 }
 
+.menu-item-image-third{
+	position: relative;
+	width: 10rem;
+	height: 10rem;
+}
+
 
 .menu-item-container {
 	display: inline-block;
