@@ -29,6 +29,13 @@
 }
 
 
+.menu-item-image-second{
+	position: relative;
+	width: 10rem;
+	height: 10rem;
+}
+
+
 .menu-item-container {
 	display: inline-block;
 	vertical-align: middle;
