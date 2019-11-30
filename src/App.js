@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
+import { ContextProvider } from './Context';
 import Register from './components/Register/Register';
 import Register2 from './components/Register/Register2';
 import RegisterComplete from './components/Register/RegisterComplete';
@@ -51,173 +52,183 @@ class App extends Component {
 
 	render() {
 		return (
-			<Switch>
-				<Route
-					exact={true}
-					path="/"
-					render={() => <Register value={this.state} handleInput={this.handleInput.bind(this)} />}
-				/>
+			<ContextProvider>
+				<Switch>
+					<Route
+						exact={true}
+						path="/"
+						render={() => <Register value={this.state} handleInput={this.handleInput.bind(this)} />}
+					/>
 
-				<Route
-					exact={true}
-					path="/register2"
-					render={() => <Register2 value={this.state} handleInput={this.handleInput.bind(this)} />}
-				/>
+					<Route
+						exact={true}
+						path="/register2"
+						render={() => <Register2 value={this.state} handleInput={this.handleInput.bind(this)} />}
+					/>
 
-				<Route exact={true} path="/registercomplete" render={() => <RegisterComplete value={this.state} />} />
+					<Route
+						exact={true}
+						path="/registercomplete"
+						render={() => <RegisterComplete value={this.state} />}
+					/>
 
-				<Route exact={true} path="/home" render={() => <Home value={this.state} food={this.state.food} />} />
+					<Route
+						exact={true}
+						path="/home"
+						render={() => <Home value={this.state} food={this.state.food} />}
+					/>
 
-				<Route
-					exact={true}
-					path="/profile"
-					render={() => <Profile value={this.state} handleInput={this.handleInput.bind(this)} />}
-				/>
+					<Route
+						exact={true}
+						path="/profile"
+						render={() => <Profile value={this.state} handleInput={this.handleInput.bind(this)} />}
+					/>
 
-				<Route
-					exact={true}
-					path="/restaurants/pizza"
-					render={() => <Pizza value={this.state} handleInput={this.handleInput.bind(this)} />}
-				/>
+					<Route
+						exact={true}
+						path="/restaurants/pizza"
+						render={() => <Pizza value={this.state} handleInput={this.handleInput.bind(this)} />}
+					/>
 
-				<Route
-					exact={true}
-					path="/restaurants/pizza2"
-					render={() => <Pizza2 value={this.state} handleInput={this.handleInput.bind(this)} />}
-				/>
+					<Route
+						exact={true}
+						path="/restaurants/pizza2"
+						render={() => <Pizza2 value={this.state} handleInput={this.handleInput.bind(this)} />}
+					/>
 
-				<Route
-					exact={true}
-					path="/restaurants/pizza3"
-					render={() => <Pizza3 value={this.state} handleInput={this.handleInput.bind(this)} />}
-				/>
+					<Route
+						exact={true}
+						path="/restaurants/pizza3"
+						render={() => <Pizza3 value={this.state} handleInput={this.handleInput.bind(this)} />}
+					/>
 
-				<Route
-					exact={true}
-					path="/restaurants/sushi"
-					render={() => <Sushi value={this.state} handleInput={this.handleInput.bind(this)} />}
-				/>
+					<Route
+						exact={true}
+						path="/restaurants/sushi"
+						render={() => <Sushi value={this.state} handleInput={this.handleInput.bind(this)} />}
+					/>
 
-				<Route
-					exact={true}
-					path="/restaurants/sushi2"
-					render={() => <Sushi2 value={this.state} handleInput={this.handleInput.bind(this)} />}
-				/>
+					<Route
+						exact={true}
+						path="/restaurants/sushi2"
+						render={() => <Sushi2 value={this.state} handleInput={this.handleInput.bind(this)} />}
+					/>
 
-				<Route
-					exact={true}
-					path="/restaurants/sushi3"
-					render={() => <Sushi3 value={this.state} handleInput={this.handleInput.bind(this)} />}
-				/>
+					<Route
+						exact={true}
+						path="/restaurants/sushi3"
+						render={() => <Sushi3 value={this.state} handleInput={this.handleInput.bind(this)} />}
+					/>
 
-				<Route
-					exact={true}
-					path="/restaurants/pasta"
-					render={() => <Pasta value={this.state} handleInput={this.handleInput.bind(this)} />}
-				/>
+					<Route
+						exact={true}
+						path="/restaurants/pasta"
+						render={() => <Pasta value={this.state} handleInput={this.handleInput.bind(this)} />}
+					/>
 
-				<Route
-					exact={true}
-					path="/restaurants/pasta2"
-					render={() => <Pasta2 value={this.state} handleInput={this.handleInput.bind(this)} />}
-				/>
+					<Route
+						exact={true}
+						path="/restaurants/pasta2"
+						render={() => <Pasta2 value={this.state} handleInput={this.handleInput.bind(this)} />}
+					/>
 
-				<Route
-					exact={true}
-					path="/restaurants/pasta3"
-					render={() => <Pasta3 value={this.state} handleInput={this.handleInput.bind(this)} />}
-				/>
+					<Route
+						exact={true}
+						path="/restaurants/pasta3"
+						render={() => <Pasta3 value={this.state} handleInput={this.handleInput.bind(this)} />}
+					/>
 
-				<Route
-					exact={true}
-					path="/restaurants/sandwich"
-					render={() => <Sandwich value={this.state} handleInput={this.handleInput.bind(this)} />}
-				/>
+					<Route
+						exact={true}
+						path="/restaurants/sandwich"
+						render={() => <Sandwich value={this.state} handleInput={this.handleInput.bind(this)} />}
+					/>
 
-				<Route
-					exact={true}
-					path="/restaurants/sandwich2"
-					render={() => <Sandwich2 value={this.state} handleInput={this.handleInput.bind(this)} />}
-				/>
+					<Route
+						exact={true}
+						path="/restaurants/sandwich2"
+						render={() => <Sandwich2 value={this.state} handleInput={this.handleInput.bind(this)} />}
+					/>
 
-				<Route
-					exact={true}
-					path="/restaurants/sandwich3"
-					render={() => <Sandwich3 value={this.state} handleInput={this.handleInput.bind(this)} />}
-				/>
+					<Route
+						exact={true}
+						path="/restaurants/sandwich3"
+						render={() => <Sandwich3 value={this.state} handleInput={this.handleInput.bind(this)} />}
+					/>
 
-				<Route
-					exact={true}
-					path="/restaurants/indian"
-					render={() => <Indian value={this.state} handleInput={this.handleInput.bind(this)} />}
-				/>
+					<Route
+						exact={true}
+						path="/restaurants/indian"
+						render={() => <Indian value={this.state} handleInput={this.handleInput.bind(this)} />}
+					/>
 
-				<Route
-					exact={true}
-					path="/restaurants/indian2"
-					render={() => <Indian2 value={this.state} handleInput={this.handleInput.bind(this)} />}
-				/>
+					<Route
+						exact={true}
+						path="/restaurants/indian2"
+						render={() => <Indian2 value={this.state} handleInput={this.handleInput.bind(this)} />}
+					/>
 
-				<Route
-					exact={true}
-					path="/restaurants/indian3"
-					render={() => <Indian3 value={this.state} handleInput={this.handleInput.bind(this)} />}
-				/>
+					<Route
+						exact={true}
+						path="/restaurants/indian3"
+						render={() => <Indian3 value={this.state} handleInput={this.handleInput.bind(this)} />}
+					/>
 
-				<Route
-					exact={true}
-					path="/restaurants/bbq"
-					render={() => <Bbq value={this.state} handleInput={this.handleInput.bind(this)} />}
-				/>
+					<Route
+						exact={true}
+						path="/restaurants/bbq"
+						render={() => <Bbq value={this.state} handleInput={this.handleInput.bind(this)} />}
+					/>
 
-				<Route
-					exact={true}
-					path="/restaurants/bbq2"
-					render={() => <Bbq2 value={this.state} handleInput={this.handleInput.bind(this)} />}
-				/>
+					<Route
+						exact={true}
+						path="/restaurants/bbq2"
+						render={() => <Bbq2 value={this.state} handleInput={this.handleInput.bind(this)} />}
+					/>
 
-				<Route
-					exact={true}
-					path="/restaurants/bbq3"
-					render={() => <Bbq3 value={this.state} handleInput={this.handleInput.bind(this)} />}
-				/>
+					<Route
+						exact={true}
+						path="/restaurants/bbq3"
+						render={() => <Bbq3 value={this.state} handleInput={this.handleInput.bind(this)} />}
+					/>
 
-				<Route
-					exact={true}
-					path="/restaurants/sushi/sushiorder"
-					render={() => <SushiOrder value={this.state} handleInput={this.handleInput.bind(this)} />}
-				/>
+					<Route
+						exact={true}
+						path="/restaurants/sushi/sushiorder"
+						render={() => <SushiOrder value={this.state} handleInput={this.handleInput.bind(this)} />}
+					/>
 
-				<Route
-					exact={true}
-					path="/restaurants/pizza/pizzaorder"
-					render={() => <PizzaOrder value={this.state} handleInput={this.handleInput.bind(this)} />}
-				/>
+					<Route
+						exact={true}
+						path="/restaurants/pizza/pizzaorder"
+						render={() => <PizzaOrder value={this.state} handleInput={this.handleInput.bind(this)} />}
+					/>
 
-				<Route
-					exact={true}
-					path="/restaurants/sandwich/sandwichorder"
-					render={() => <SandwichOrder value={this.state} handleInput={this.handleInput.bind(this)} />}
-				/>
+					<Route
+						exact={true}
+						path="/restaurants/sandwich/sandwichorder"
+						render={() => <SandwichOrder value={this.state} handleInput={this.handleInput.bind(this)} />}
+					/>
 
-				<Route
-					exact={true}
-					path="/restaurants/pasta/pastaorder"
-					render={() => <PastaOrder value={this.state} handleInput={this.handleInput.bind(this)} />}
-				/>
+					<Route
+						exact={true}
+						path="/restaurants/pasta/pastaorder"
+						render={() => <PastaOrder value={this.state} handleInput={this.handleInput.bind(this)} />}
+					/>
 
-				<Route
-					exact={true}
-					path="/restaurants/indian/indianorder"
-					render={() => <IndianOrder value={this.state} handleInput={this.handleInput.bind(this)} />}
-				/>
+					<Route
+						exact={true}
+						path="/restaurants/indian/indianorder"
+						render={() => <IndianOrder value={this.state} handleInput={this.handleInput.bind(this)} />}
+					/>
 
-				<Route
-					exact={true}
-					path="/restaurants/bbq/barbequeorder"
-					render={() => <BbqOrder value={this.state} handleInput={this.handleInput.bind(this)} />}
-				/>
-			</Switch>
+					<Route
+						exact={true}
+						path="/restaurants/bbq/barbequeorder"
+						render={() => <BbqOrder value={this.state} handleInput={this.handleInput.bind(this)} />}
+					/>
+				</Switch>
+			</ContextProvider>
 		);
 	}
 }
