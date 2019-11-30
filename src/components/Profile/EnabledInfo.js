@@ -1,9 +1,18 @@
-import React, { Component } from "react";
+import React, { useContext } from "react";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import TextField from "../micro-components/TextField";
+import { AppContext } from '../../Context';
 
-class DisabledInfo extends Component {
-  render() {
+const EnabledInfo = props => {
+    const {profileInfoContext} = useContext(AppContext);
+    const [profileInfo,setProfileInfo] = profileInfoContext;
+    
+    const handleInput = (e) => {
+      setProfileInfo({...profileInfo,
+        [e.target.name]: e.target.value
+      });
+    };
+
     return (
       <div>
         <div className="info2">
@@ -24,8 +33,8 @@ class DisabledInfo extends Component {
             <TextField
               text="First Name"
               icon={<AccountCircle />}
-              handleInput={this.props.handleInput}
-              value={this.props.value.firstName}
+              handleInput={handleInput}
+              value={profileInfo.firstName}
               name="firstName"
               hasIcon="false"
             />
@@ -34,8 +43,8 @@ class DisabledInfo extends Component {
             <TextField
               text="Last Name"
               icon={<AccountCircle />}
-              handleInput={this.props.handleInput}
-              value={this.props.value.lastName}
+              handleInput={handleInput}
+              value={profileInfo.lastName}
               name="lastName"
               hasIcon="false"
             />
@@ -44,8 +53,8 @@ class DisabledInfo extends Component {
             <TextField
               text="City"
               icon={<AccountCircle />}
-              handleInput={this.props.handleInput}
-              value={this.props.value.city}
+              handleInput={handleInput}
+              value={profileInfo.city}
               name="city"
               hasIcon="false"
             />
@@ -54,8 +63,8 @@ class DisabledInfo extends Component {
             <TextField
               text="Phone Number"
               icon={<AccountCircle />}
-              handleInput={this.props.handleInput}
-              value={this.props.value.phoneNumber}
+              handleInput={handleInput}
+              value={profileInfo.phoneNumber}
               name="phoneNumber"
               hasIcon="false"
             />
@@ -64,8 +73,8 @@ class DisabledInfo extends Component {
             <TextField
               text="Occupation"
               icon={<AccountCircle />}
-              handleInput={this.props.handleInput}
-              value={this.props.value.occupation}
+              handleInput={handleInput}
+              value={profileInfo.occupation}
               name="occupation"
               hasIcon="false"
             />
@@ -74,8 +83,8 @@ class DisabledInfo extends Component {
             <TextField
               text="E-mail"
               icon={<AccountCircle />}
-              handleInput={this.props.handleInput}
-              value={this.props.value.email}
+              handleInput={handleInput}
+              value={profileInfo.email}
               name="email"
               hasIcon="false"
             />
@@ -84,6 +93,7 @@ class DisabledInfo extends Component {
       </div>
     );
   }
-}
 
-export default DisabledInfo;
+
+
+export default EnabledInfo;
