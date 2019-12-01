@@ -36,6 +36,14 @@
     font-family: "Lato", sans-serif;
     width: 20rem;
     border-radius: 2rem;
-    left: 5rem;
-    border:5px solid #ff4136
+    left: 7rem;
+    border:5px solid rgba(255,65,54,0.85)
+}
+
+.orders-list-item{
+    width: 80%;
+    border: 1px solid black;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 10px;
 }

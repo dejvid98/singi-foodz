@@ -22,11 +22,10 @@ export default function Order(props) {
 
 	const handleCheckout = (e) => {
 		setReviews([ ...reviews, { cart } ]);
-		console.log(cart);
 	};
 
 	const handleCart = (name, price, quantity) => {
-		setCart([ ...cart, { name, price, quantity, time: new Date().toLocaleDateString() } ]);
+		setCart([ ...cart, { restaurant :'Grill 51 Bar',name, price, quantity, date: new Date().toLocaleDateString(), raiting: 0 } ]);
 	};
 
 	const ingridients1 = [ 'Cheese', 'Pepperoni', 'Tomato ' ];
