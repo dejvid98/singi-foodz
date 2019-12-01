@@ -12,7 +12,7 @@ export default function Reviews() {
             {reviews.map((review,index) => {
                 console.log(review);
                 return(
-                    <li>{review.cart[index].name}</li>
+                    <li>Name :{review.cart[index].name}</li>
                 )
             })}
         </div>
