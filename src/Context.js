@@ -16,8 +16,10 @@ export const ContextProvider = (props) => {
 
 	const [ reviews, setReviews ] = useState([]);
 	const [ foodRaiting, setFoodRaiting ] = useState(0);
-	const [ deliveryTimeRaiting, setDeliveryTimeRaiting ] = useState(2);
-	const [ menuOptionsRaiting, setMenuOptionsRaiting ] = useState(3);
+	const [ deliveryTimeRaiting, setDeliveryTimeRaiting ] = useState(0);
+	const [ menuOptionsRaiting, setMenuOptionsRaiting ] = useState(0);
+	const [ cart, setCart ] = useState([]);
+
 
 
 
@@ -28,7 +30,8 @@ export const ContextProvider = (props) => {
 				reviewsContext: [ reviews, setReviews ],
 				foodRaitingContext:[ foodRaiting, setFoodRaiting ],
 				deliveryTimeRaitingContext:[ deliveryTimeRaiting, setDeliveryTimeRaiting ],
-				menuOptionsRaitingContext:[ menuOptionsRaiting, setMenuOptionsRaiting ]
+				menuOptionsRaitingContext:[ menuOptionsRaiting, setMenuOptionsRaiting ],
+				cartContext:[cart, setCart ]
 			}}
 		>
 			{props.children}

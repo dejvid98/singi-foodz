@@ -43,6 +43,7 @@ export default function SimpleModal(props) {
 	const [ price, setPrice ] = React.useState(props.price);
 	const [ quantity, setQuantity ] = React.useState(1);
 
+
 	const handleOpen = () => {
 		setOpen(true);
 	};
@@ -64,7 +65,8 @@ export default function SimpleModal(props) {
 	};
 
 	const handleCart = () => {
-		props.handleCart(props.foodName,price,quantity)
+		props.handleCart(props.foodName,props.price,quantity);
+		// setCart([...cart,{name : props.foodName, price :price , quantity:quantity }])
 		handleClose();
 		setPrice(props.price);
 		setQuantity(1);
