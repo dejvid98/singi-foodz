@@ -9,6 +9,10 @@ import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
+import RaitingFood from './RaitingFood';
+import RaitingDelivery from './RaitingDelivery';
+import RaitingMenu from './RaitingMenu';
+
 
 const styles = (theme) => ({
 	root: {
@@ -39,7 +43,8 @@ const DialogTitle = withStyles(styles)((props) => {
 
 const DialogContent = withStyles((theme) => ({
 	root: {
-		padding: theme.spacing(2)
+		padding: theme.spacing(2),
+		width: '35rem'
 	}
 }))(MuiDialogContent);
 
@@ -70,34 +75,92 @@ export default function CustomizedDialogs(props) {
 					Please review your order!
 				</DialogTitle>
 				<DialogContent dividers>
-					<Grid container spacing={1}>
-						<Grid item xs={6}>
-							<h5>Restaurant :</h5>
-						</Grid>
-                        <Grid item xs={6}>
-							<h5>{props.restaurant}</h5>
-						</Grid>
-					</Grid>
-
-                    <Grid container spacing={1}>
-						<Grid item xs={6}>
-							<h5>Date :</h5>
-						</Grid>
-                        <Grid item xs={6}>
-							<h5>{props.date}</h5>
-						</Grid>
-					</Grid>
-                    <Grid container spacing={1}>
-						<Grid item xs={6}>
-							<h5>Food :</h5>
-						</Grid>
-                        <Grid item xs={6}>
-							<h5>{props.food}</h5>
-						</Grid>
-					</Grid>
 					<Typography gutterBottom>
-						Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque
-						nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+						<Grid container spacing={1}>
+							<Grid item xs={6}>
+								<h5>Restaurant :</h5>
+							</Grid>
+							<Grid item xs={6}>
+								<h5>{props.restaurant}</h5>
+							</Grid>
+						</Grid>
+					</Typography>
+
+					<Typography gutterBottom>
+						<Grid container spacing={1}>
+							<Grid item xs={6}>
+								<h5>Date :</h5>
+							</Grid>
+							<Grid item xs={6}>
+								<h5>{props.date}</h5>
+							</Grid>
+						</Grid>
+					</Typography>
+
+					<Typography gutterBottom>
+						<Grid container spacing={1}>
+							<Grid item xs={6}>
+								<h5>Food :</h5>
+							</Grid>
+							<Grid item xs={6}>
+								<h5>{props.name}</h5>
+							</Grid>
+						</Grid>
+					</Typography>
+
+					<Typography gutterBottom>
+						<Grid container spacing={1}>
+							<Grid item xs={6}>
+								<h5>Quantity :</h5>
+							</Grid>
+							<Grid item xs={6}>
+								<h5>{props.quantity}</h5>
+							</Grid>
+						</Grid>
+					</Typography>
+
+					<Typography gutterBottom>
+						<Grid container spacing={1}>
+							<Grid item xs={6}>
+								<h5>Price :</h5>
+							</Grid>
+							<Grid item xs={6}>
+								<h5>{props.price}</h5>
+							</Grid>
+						</Grid>
+					</Typography>
+
+					<Typography gutterBottom>
+						<Grid container spacing={1}>
+							<Grid item xs={6}>
+								<h5>Food Taste :</h5>
+							</Grid>
+							<Grid item xs={6}>
+								<RaitingFood />
+							</Grid>
+						</Grid>
+					</Typography>
+
+					<Typography gutterBottom>
+						<Grid container spacing={1}>
+							<Grid item xs={6}>
+								<h5>Delivery Time :</h5>
+							</Grid>
+							<Grid item xs={6}>
+								<RaitingDelivery />
+							</Grid>
+						</Grid>
+					</Typography>
+
+					<Typography gutterBottom>
+						<Grid container spacing={1}>
+							<Grid item xs={6}>
+								<h5>Menu Options :</h5>
+							</Grid>
+							<Grid item xs={6}>
+								<RaitingMenu />
+							</Grid>
+						</Grid>
 					</Typography>
 				</DialogContent>
 				<DialogActions>
