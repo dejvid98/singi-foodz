@@ -5,6 +5,7 @@ import Register from './components/Register/Register';
 import Register2 from './components/Register/Register2';
 import RegisterComplete from './components/Register/RegisterComplete';
 import Home from './components/Home/Home';
+import Reviews from './components/Reviews/Reviews';
 import Profile from './components/Profile/Profile';
 import Pizza from './components/Restaurants/Pizza/Pizza';
 import Pizza2 from './components/Restaurants/Pizza/Pizza2';
@@ -34,16 +35,6 @@ import BbqOrder from './components/Order/BbqOrder';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
-	state = {
-		firstName: '',
-		lastName: '',
-		email: '',
-		phoneNumber: '',
-		city: '',
-		occupation: '',
-		food: ''
-	};
-
 	handleInput = (e) => {
 		this.setState({
 			[e.target.name]: e.target.value
@@ -54,179 +45,65 @@ class App extends Component {
 		return (
 			<ContextProvider>
 				<Switch>
-					<Route
-						exact={true}
-						path="/"
-						render={() => <Register value={this.state} handleInput={this.handleInput.bind(this)} />}
-					/>
+					<Route exact={true} path="/" render={() => <Register />} />
 
-					<Route
-						exact={true}
-						path="/register2"
-						render={() => <Register2 value={this.state} handleInput={this.handleInput.bind(this)} />}
-					/>
+					<Route exact={true} path="/register2" render={() => <Register2 />} />
 
-					<Route
-						exact={true}
-						path="/registercomplete"
-						render={() => <RegisterComplete value={this.state} />}
-					/>
+					<Route exact={true} path="/registercomplete" render={() => <RegisterComplete />} />
 
-					<Route
-						exact={true}
-						path="/home"
-						render={() => <Home value={this.state} food={this.state.food} />}
-					/>
+					<Route exact={true} path="/home" render={() => <Home />} />
 
-					<Route
-						exact={true}
-						path="/profile"
-						render={() => <Profile value={this.state} handleInput={this.handleInput.bind(this)} />}
-					/>
+					<Route exact={true} path="/profile" render={() => <Profile />} />
 
-					<Route
-						exact={true}
-						path="/restaurants/pizza"
-						render={() => <Pizza value={this.state} handleInput={this.handleInput.bind(this)} />}
-					/>
+					<Route exact={true} path="/restaurants/pizza" render={() => <Pizza />} />
 
-					<Route
-						exact={true}
-						path="/restaurants/pizza2"
-						render={() => <Pizza2 value={this.state} handleInput={this.handleInput.bind(this)} />}
-					/>
+					<Route exact={true} path="/restaurants/pizza2" render={() => <Pizza2 />} />
 
-					<Route
-						exact={true}
-						path="/restaurants/pizza3"
-						render={() => <Pizza3 value={this.state} handleInput={this.handleInput.bind(this)} />}
-					/>
+					<Route exact={true} path="/restaurants/pizza3" render={() => <Pizza3 />} />
 
-					<Route
-						exact={true}
-						path="/restaurants/sushi"
-						render={() => <Sushi value={this.state} handleInput={this.handleInput.bind(this)} />}
-					/>
+					<Route exact={true} path="/restaurants/sushi" render={() => <Sushi />} />
 
-					<Route
-						exact={true}
-						path="/restaurants/sushi2"
-						render={() => <Sushi2 value={this.state} handleInput={this.handleInput.bind(this)} />}
-					/>
+					<Route exact={true} path="/restaurants/sushi2" render={() => <Sushi2 />} />
 
-					<Route
-						exact={true}
-						path="/restaurants/sushi3"
-						render={() => <Sushi3 value={this.state} handleInput={this.handleInput.bind(this)} />}
-					/>
+					<Route exact={true} path="/restaurants/sushi3" render={() => <Sushi3 />} />
 
-					<Route
-						exact={true}
-						path="/restaurants/pasta"
-						render={() => <Pasta value={this.state} handleInput={this.handleInput.bind(this)} />}
-					/>
+					<Route exact={true} path="/restaurants/pasta" render={() => <Pasta />} />
 
-					<Route
-						exact={true}
-						path="/restaurants/pasta2"
-						render={() => <Pasta2 value={this.state} handleInput={this.handleInput.bind(this)} />}
-					/>
+					<Route exact={true} path="/restaurants/pasta2" render={() => <Pasta2 />} />
 
-					<Route
-						exact={true}
-						path="/restaurants/pasta3"
-						render={() => <Pasta3 value={this.state} handleInput={this.handleInput.bind(this)} />}
-					/>
+					<Route exact={true} path="/restaurants/pasta3" render={() => <Pasta3 />} />
 
-					<Route
-						exact={true}
-						path="/restaurants/sandwich"
-						render={() => <Sandwich value={this.state} handleInput={this.handleInput.bind(this)} />}
-					/>
+					<Route exact={true} path="/restaurants/sandwich" render={() => <Sandwich />} />
 
-					<Route
-						exact={true}
-						path="/restaurants/sandwich2"
-						render={() => <Sandwich2 value={this.state} handleInput={this.handleInput.bind(this)} />}
-					/>
+					<Route exact={true} path="/restaurants/sandwich2" render={() => <Sandwich2 />} />
 
-					<Route
-						exact={true}
-						path="/restaurants/sandwich3"
-						render={() => <Sandwich3 value={this.state} handleInput={this.handleInput.bind(this)} />}
-					/>
+					<Route exact={true} path="/restaurants/sandwich3" render={() => <Sandwich3 />} />
 
-					<Route
-						exact={true}
-						path="/restaurants/indian"
-						render={() => <Indian value={this.state} handleInput={this.handleInput.bind(this)} />}
-					/>
+					<Route exact={true} path="/restaurants/indian" render={() => <Indian />} />
 
-					<Route
-						exact={true}
-						path="/restaurants/indian2"
-						render={() => <Indian2 value={this.state} handleInput={this.handleInput.bind(this)} />}
-					/>
+					<Route exact={true} path="/restaurants/indian2" render={() => <Indian2 />} />
 
-					<Route
-						exact={true}
-						path="/restaurants/indian3"
-						render={() => <Indian3 value={this.state} handleInput={this.handleInput.bind(this)} />}
-					/>
+					<Route exact={true} path="/restaurants/indian3" render={() => <Indian3 />} />
 
-					<Route
-						exact={true}
-						path="/restaurants/bbq"
-						render={() => <Bbq value={this.state} handleInput={this.handleInput.bind(this)} />}
-					/>
+					<Route exact={true} path="/restaurants/bbq" render={() => <Bbq />} />
 
-					<Route
-						exact={true}
-						path="/restaurants/bbq2"
-						render={() => <Bbq2 value={this.state} handleInput={this.handleInput.bind(this)} />}
-					/>
+					<Route exact={true} path="/restaurants/bbq2" render={() => <Bbq2 />} />
 
-					<Route
-						exact={true}
-						path="/restaurants/bbq3"
-						render={() => <Bbq3 value={this.state} handleInput={this.handleInput.bind(this)} />}
-					/>
+					<Route exact={true} path="/restaurants/bbq3" render={() => <Bbq3 />} />
 
-					<Route
-						exact={true}
-						path="/restaurants/sushi/sushiorder"
-						render={() => <SushiOrder value={this.state} handleInput={this.handleInput.bind(this)} />}
-					/>
+					<Route exact={true} path="/restaurants/sushi/sushiorder" render={() => <SushiOrder />} />
 
-					<Route
-						exact={true}
-						path="/restaurants/pizza/pizzaorder"
-						render={() => <PizzaOrder value={this.state} handleInput={this.handleInput.bind(this)} />}
-					/>
+					<Route exact={true} path="/restaurants/pizza/pizzaorder" render={() => <PizzaOrder />} />
 
-					<Route
-						exact={true}
-						path="/restaurants/sandwich/sandwichorder"
-						render={() => <SandwichOrder value={this.state} handleInput={this.handleInput.bind(this)} />}
-					/>
+					<Route exact={true} path="/restaurants/sandwich/sandwichorder" render={() => <SandwichOrder />} />
 
-					<Route
-						exact={true}
-						path="/restaurants/pasta/pastaorder"
-						render={() => <PastaOrder value={this.state} handleInput={this.handleInput.bind(this)} />}
-					/>
+					<Route exact={true} path="/restaurants/pasta/pastaorder" render={() => <PastaOrder />} />
 
-					<Route
-						exact={true}
-						path="/restaurants/indian/indianorder"
-						render={() => <IndianOrder value={this.state} handleInput={this.handleInput.bind(this)} />}
-					/>
+					<Route exact={true} path="/restaurants/indian/indianorder" render={() => <IndianOrder />} />
 
-					<Route
-						exact={true}
-						path="/restaurants/bbq/barbequeorder"
-						render={() => <BbqOrder value={this.state} handleInput={this.handleInput.bind(this)} />}
-					/>
+					<Route exact={true} path="/restaurants/bbq/barbequeorder" render={() => <BbqOrder />} />
+
+					<Route exact={true} path="/reviews" render={() => <Reviews />} />
 				</Switch>
 			</ContextProvider>
 		);

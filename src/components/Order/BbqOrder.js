@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { AppContext } from '../../Context';
 import './Order.css';
 import Header from '../Home/Header';
 import Footer from '../Home/Footer';
@@ -15,6 +16,14 @@ import MenuItem6 from '../../Assets/BbqMenu/6.jfif';
 
 export default function Order(props) {
 	const [ cart, setCart ] = useState([]);
+	const { reviewsContext } = useContext(AppContext);
+	//eslint-disable-next-line
+	const [ reviews, setReviews ] = reviewsContext;
+
+	const handleCheckout = (e) => {
+		setReviews([ ...reviews, { cart } ]);
+		console.log(cart);
+	};
 
 	const handleCart = (name, price, quantity) => {
 		setCart([ ...cart, { name, price, quantity } ]);
@@ -32,21 +41,21 @@ export default function Order(props) {
 				<Grid container spacing={6}>
 					<Grid item xs={4}>
 						<div className="shopping-cart">
-							<h3>Shopping Cart</h3>
+							<h3>Shopping Cart </h3>
 							{cart.length === 0 ? (
 								<p className="cart-info">Your shopping cart is currently empty</p>
 							) : null}
-							{cart.map((item) => {
+							{cart.map((item, index) => {
 								return (
 									<div>
 										<hr />
-										<Grid container spacing={1}>
+										<Grid container spacing={1} key={index}>
 											<Grid item xs={12}>
 												<h5>{item.name}</h5>
 											</Grid>
 										</Grid>
 
-										<Grid container spacing={4}>
+										<Grid container spacing={4} key={index}>
 											<Grid item xs={6}>
 												Price
 											</Grid>
@@ -55,7 +64,7 @@ export default function Order(props) {
 											</Grid>
 										</Grid>
 
-										<Grid container spacing={4}>
+										<Grid container spacing={4} key={index}>
 											<Grid item xs={6}>
 												{item.price}
 											</Grid>
@@ -68,7 +77,8 @@ export default function Order(props) {
 								);
 							})}
 						</div>
-						<div className="checkout-button">
+
+						<div className="checkout-button" onClick={handleCheckout}>
 							<Fab variant="extended" color="secondary" className="checkout-button">
 								<div
 									style={{

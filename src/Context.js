@@ -14,8 +14,15 @@ export const ContextProvider = (props) => {
 		food: ''
 	});
 
+	const [ reviews, setReviews ] = useState([]);
+
 	return (
-		<AppContext.Provider value={{ profileInfoContext: [ profileInfo, setProfileInfo ] }}>
+		<AppContext.Provider
+			value={{
+				profileInfoContext: [ profileInfo, setProfileInfo ],
+				reviewsContext: [ reviews, setReviews ]
+			}}
+		>
 			{props.children}
 		</AppContext.Provider>
 	);
