@@ -9,9 +9,10 @@ export default function Reviews() {
         <div>
             <h1>hii</h1>
 
-            {reviews.map(review => {
+            {reviews.map((review,index) => {
+                console.log(review);
                 return(
-                    <li>{review.name[0]}</li>
+                    <li>{review.cart[index].name}</li>
                 )
             })}
         </div>
