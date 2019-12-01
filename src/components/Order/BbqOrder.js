@@ -26,7 +26,7 @@ export default function Order(props) {
 	};
 
 	const handleCart = (name, price, quantity) => {
-		setCart([ ...cart, { name, price, quantity } ]);
+		setCart([ ...cart, { name, price, quantity, time: new Date().toLocaleDateString() } ]);
 	};
 
 	const ingridients1 = [ 'Cheese', 'Pepperoni', 'Tomato ' ];
