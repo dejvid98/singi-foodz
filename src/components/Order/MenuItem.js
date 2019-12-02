@@ -13,6 +13,7 @@ const MenuItem = (props) => {
 					raitingValue={props.raitingValue}
 					handleCart={props.handleCart}
 					price={props.price}
+					quantity={props.quantity}
 					ingridientListOne={props.ingredients1}
 					ingridientListTwo={props.ingredients2}
 				/>

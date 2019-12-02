@@ -23,7 +23,7 @@ export default function UncontrolledTextField(props) {
         disabled={props.isDisabled}
         id="filled-disabled"
         defaultValue={props.text}
-        className={classes.textField}
+        className='profle-input-field'
         margin="normal"
         variant="outlined"
         label={props.name}

@@ -1,89 +1,114 @@
-import React, { Component } from "react";
-import AccountCircle from "@material-ui/icons/AccountCircle";
-import TextField from "../micro-components/TextField";
+import React, { useContext } from 'react';
+import TextField from '../micro-components/TextField';
+import Grid from '@material-ui/core/Grid';
+import Footer from '../Home/Footer';
 
-class DisabledInfo extends Component {
-  render() {
-    return (
-      <div>
-        <div className="info2">
-          <p>First Name</p>
-          <br />
-          <p>Last Name :</p>
-          <br />
-          <p>City :</p>
-          <br />
-          <p>Phone Number :</p>
-          <br />
-          <p>Occupation :</p>
-          <br />
-          <p>E-mail :</p>
-        </div>
-        <div className="info">
-          <div className="textinfo">
-            <TextField
-              text="First Name"
-              icon={<AccountCircle />}
-              handleInput={this.props.handleInput}
-              value={this.props.value.firstName}
-              name="firstName"
-              hasIcon="false"
-            />
-          </div>
-          <div className="textinfo">
-            <TextField
-              text="Last Name"
-              icon={<AccountCircle />}
-              handleInput={this.props.handleInput}
-              value={this.props.value.lastName}
-              name="lastName"
-              hasIcon="false"
-            />
-          </div>
-          <div className="textinfo">
-            <TextField
-              text="City"
-              icon={<AccountCircle />}
-              handleInput={this.props.handleInput}
-              value={this.props.value.city}
-              name="city"
-              hasIcon="false"
-            />
-          </div>
-          <div className="textinfo">
-            <TextField
-              text="Phone Number"
-              icon={<AccountCircle />}
-              handleInput={this.props.handleInput}
-              value={this.props.value.phoneNumber}
-              name="phoneNumber"
-              hasIcon="false"
-            />
-          </div>
-          <div className="textinfo">
-            <TextField
-              text="Occupation"
-              icon={<AccountCircle />}
-              handleInput={this.props.handleInput}
-              value={this.props.value.occupation}
-              name="occupation"
-              hasIcon="false"
-            />
-          </div>
-          <div className="textinfo">
-            <TextField
-              text="E-mail"
-              icon={<AccountCircle />}
-              handleInput={this.props.handleInput}
-              value={this.props.value.email}
-              name="email"
-              hasIcon="false"
-            />
-          </div>
-        </div>
-      </div>
-    );
-  }
-}
+import { AppContext } from '../../Context';
 
-export default DisabledInfo;
+const EnabledInfo = (props) => {
+	const {profileInfoContext}  = useContext(AppContext);
+	const [ profileInfo, setProfileInfo ] = profileInfoContext;
+	const handleInput = (e) => {
+		setProfileInfo({...profileInfo,
+			[e.target.name]: e.target.value
+		});
+	};
+
+
+	return (
+		<div className="profile-info-box">
+			<Grid container spacing={1} className="grid-enabled-info">
+				<Grid item xs={6}>
+					First Name :
+				</Grid>
+				<Grid item xs={6}>
+					<TextField
+						name="firstName"
+						value={profileInfo.firstName}
+						text={profileInfo.firstName}
+						handleInput={handleInput}
+						klas="profle-input-field-second"
+					/>
+				</Grid>
+			</Grid>
+
+			<Grid container spacing={1} className="grid-enabled-info">
+				<Grid item xs={6}>
+					Last Name :
+				</Grid>
+				<Grid item xs={6}>
+					<TextField
+						name="lastName"
+						value={profileInfo.lastName}
+						text={profileInfo.lastName}
+						handleInput={handleInput}
+						klas="profle-input-field-second"
+					/>
+				</Grid>
+			</Grid>
+
+			<Grid container spacing={1} className="grid-enabled-info">
+				<Grid item xs={6}>
+					City :
+				</Grid>
+				<Grid item xs={6}>
+					<TextField
+						name="city"
+						value={profileInfo.city}
+						text={profileInfo.city}
+						handleInput={handleInput}
+						klas="profle-input-field-second"
+					/>
+				</Grid>
+			</Grid>
+
+			<Grid container spacing={1} className="grid-enabled-info">
+				<Grid item xs={6}>
+					Phone Number :
+				</Grid>
+				<Grid item xs={6}>
+					<TextField
+						name="phoneNumber"
+						value={profileInfo.phoneNumber}
+						text={profileInfo.phoneNumber}
+						handleInput={handleInput}
+						klas="profle-input-field-second"
+					/>
+				</Grid>
+			</Grid>
+
+			<Grid container spacing={1} className="grid-enabled-info">
+				<Grid item xs={6}>
+					Occupation :
+				</Grid>
+				<Grid item xs={6}>
+					<TextField
+						name="occupation"
+						value={profileInfo.occupation}
+						text={profileInfo.occupation}
+						handleInput={handleInput}
+						klas="profle-input-field-second"
+					/>
+				</Grid>
+			</Grid>
+
+			<Grid container spacing={1} className="grid-enabled-info">
+				<Grid item xs={6}>
+					E-mail :
+				</Grid>
+				<Grid item xs={6}>
+					<TextField
+						name="email"
+						value={profileInfo.email}
+						text={profileInfo.email}
+						handleInput={handleInput}
+						klas="profle-input-field-second"
+					/>
+				</Grid>
+			</Grid>
+			<Footer klas="footer-enabled" />
+		</div>
+	);
+};
+
+export default EnabledInfo;

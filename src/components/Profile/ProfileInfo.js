@@ -19,9 +19,9 @@ class ProfileInfo extends Component {
   };
   render() {
     return (
-      <div>
+      <div >
         {this.state.isDisabled ? (
-          <div>
+          <div >
             <DisabledInfo value={this.props.value} />
             <div className="edit">
               <Fab

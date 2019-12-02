@@ -43,6 +43,7 @@ export default function SimpleModal(props) {
 	const [ price, setPrice ] = React.useState(props.price);
 	const [ quantity, setQuantity ] = React.useState(1);
 
+
 	const handleOpen = () => {
 		setOpen(true);
 	};
@@ -59,12 +60,13 @@ export default function SimpleModal(props) {
 	};
 
 	const handlePlus = () => {
-		setPrice(price + props.price);
+		setPrice(price + price);
 		setQuantity(quantity + 1);
 	};
 
 	const handleCart = () => {
-		props.handleCart(props.foodName,price,quantity)
+		props.handleCart(props.foodName,price,quantity);
+		// setCart([...cart,{name : props.foodName, price :price , quantity:quantity }])
 		handleClose();
 		setPrice(props.price);
 		setQuantity(1);
@@ -90,13 +92,13 @@ export default function SimpleModal(props) {
 							<hr />
 							<Grid container spacing={3}>
 								<Grid item xs={6}>
-									{props.ingridientListOne.map((ingridient) => (
-										<li style={{ margin: '1rem' }}>{ingridient}</li>
+									{props.ingridientListOne.map((ingridient,index) => (
+										<li style={{ margin: '1rem' }} key={index}>{ingridient}</li>
 									))}
 								</Grid>
 								<Grid item xs={6}>
-									{props.ingridientListTwo.map((ingridient) => (
-										<li style={{ margin: '1rem' }}>{ingridient}</li>
+									{props.ingridientListTwo.map((ingridient,index) => (
+										<li style={{ margin: '1rem' }} key={index}>{ingridient}</li>
 									))}
 								</Grid>
 							</Grid>
@@ -118,7 +120,7 @@ export default function SimpleModal(props) {
 									</Grid>
 								</Grid>
 							</p>
-							<p style={{ fontSize: '30px' }}>Price : {price}.00 RSD</p>
+							<span style={{ fontSize: '30px' }}>Price : {price}.00 RSD</span>
 							<Grid container spacing={1}>
 								<Grid item xs={6}>
 									<Raiting value={props.raitingValue} />
