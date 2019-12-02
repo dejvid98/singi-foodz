@@ -60,12 +60,12 @@ export default function SimpleModal(props) {
 	};
 
 	const handlePlus = () => {
-		setPrice(price + props.price);
+		setPrice(price + price);
 		setQuantity(quantity + 1);
 	};
 
 	const handleCart = () => {
-		props.handleCart(props.foodName,props.price,quantity);
+		props.handleCart(props.foodName,price,quantity);
 		// setCart([...cart,{name : props.foodName, price :price , quantity:quantity }])
 		handleClose();
 		setPrice(props.price);

@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
+import { AppContext } from '../../Context';
 import './Order.css';
 import Header from '../Home/Header';
 import Footer from '../Home/Footer';
@@ -14,10 +15,21 @@ import MenuItem5 from '../../Assets/PizzaMenu/5.jfif';
 import MenuItem6 from '../../Assets/PizzaMenu/6.jfif';
 
 export default function Order(props) {
-	const [ cart, setCart ] = useState([]);
+	const { reviewsContext } = useContext(AppContext);
+	const { cartContext } = useContext(AppContext);
+	const [ reviews, setReviews ] = reviewsContext;
+	const [ cart, setCart ] = cartContext;
+
+	const handleCheckout = () => {
+		setReviews([ ...reviews, cart ]);
+		setCart([]);
+	};
 
 	const handleCart = (name, price, quantity) => {
-		setCart([ ...cart, { name, price, quantity } ]);
+		setCart([
+			...cart,
+			{ restaurant: 'Dominos Pizza', name, price, quantity, date: new Date().toLocaleString() }
+		]);
 	};
 
 	const ingridients1 = [ 'Cheese', 'Pepperoni', 'Tomato ' ];
@@ -68,7 +80,7 @@ export default function Order(props) {
 								);
 							})}
 						</div>
-						<div className="checkout-button">
+						<div className="checkout-button" onClick={handleCheckout}>
 							<Fab variant="extended" color="secondary" className="checkout-button">
 								<div
 									style={{
