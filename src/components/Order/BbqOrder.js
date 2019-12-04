@@ -27,9 +27,16 @@ export default function Order(props) {
 
 	const handleCart = (name, price, quantity) => {
 		setCart([
-			...cart,
-			{ restaurant: 'Grill 51 Bar', name, price, quantity, date: new Date().toLocaleString() }
-		]);
+      ...cart,
+      {
+        restaurant: "Grill 51 Bar",
+        name,
+        price,
+        quantity,
+        date: new Date().toLocaleDateString(),
+        tajm: new Date().toLocaleTimeString()
+      }
+    ]);
 	};
 
 	const ingridients1 = [ 'Cheese', 'Pepperoni', 'Tomato ' ];

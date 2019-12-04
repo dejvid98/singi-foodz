@@ -67,109 +67,113 @@ export default function CustomizedDialogs(props) {
 	};
 
 	return (
-		<div>
-			<Button variant="outlined" color="secondary" onClick={handleClickOpen}>
-				See details
-			</Button>
-			<Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
-				<DialogTitle id="customized-dialog-title" onClose={handleClose}>
-					Please review your order!
-				</DialogTitle>
-				<DialogContent dividers>
-					<Typography gutterBottom>
-						<Grid container spacing={1}>
-							<Grid item xs={6}>
-								<h5>Restaurant :</h5>
-							</Grid>
-							<Grid item xs={6}>
-								<h5>{props.restaurant}</h5>
-							</Grid>
-						</Grid>
-					</Typography>
+    <div>
+      <Button variant="contained" color="secondary" onClick={handleClickOpen} className='details-button'>
+        See details
+      </Button>
+      <Dialog
+        onClose={handleClose}
+        aria-labelledby="customized-dialog-title"
+        open={open}
+      >
+        <DialogTitle id="customized-dialog-title" onClose={handleClose}>
+          Please review your order!
+        </DialogTitle>
+        <DialogContent dividers>
+          <Typography gutterBottom>
+            <Grid container spacing={1}>
+              <Grid item xs={6}>
+                <h5>Restaurant :</h5>
+              </Grid>
+              <Grid item xs={6}>
+                <h5>{props.restaurant}</h5>
+              </Grid>
+            </Grid>
+          </Typography>
 
-					<Typography gutterBottom>
-						<Grid container spacing={1}>
-							<Grid item xs={6}>
-								<h5>Date :</h5>
-							</Grid>
-							<Grid item xs={6}>
-								<h5>{props.date}</h5>
-							</Grid>
-						</Grid>
-					</Typography>
+          <Typography gutterBottom>
+            <Grid container spacing={1}>
+              <Grid item xs={6}>
+                <h5>Date :</h5>
+              </Grid>
+              <Grid item xs={6}>
+                <h5>{props.date}</h5>
+              </Grid>
+            </Grid>
+          </Typography>
 
-					<Typography gutterBottom>
-						<Grid container spacing={1}>
-							<Grid item xs={6}>
-								<h5>Food :</h5>
-							</Grid>
-							<Grid item xs={6}>
-								<h5>{props.name}</h5>
-							</Grid>
-						</Grid>
-					</Typography>
+          <Typography gutterBottom>
+            <Grid container spacing={1}>
+              <Grid item xs={6}>
+                <h5>Food :</h5>
+              </Grid>
+              <Grid item xs={6}>
+                <h5>{props.name}</h5>
+              </Grid>
+            </Grid>
+          </Typography>
 
-					<Typography gutterBottom>
-						<Grid container spacing={1}>
-							<Grid item xs={6}>
-								<h5>Quantity :</h5>
-							</Grid>
-							<Grid item xs={6}>
-								<h5>{props.quantity}</h5>
-							</Grid>
-						</Grid>
-					</Typography>
+          <Typography gutterBottom>
+            <Grid container spacing={1}>
+              <Grid item xs={6}>
+                <h5>Quantity :</h5>
+              </Grid>
+              <Grid item xs={6}>
+                <h5>{props.quantity}</h5>
+              </Grid>
+            </Grid>
+          </Typography>
 
-					<Typography gutterBottom>
-						<Grid container spacing={1}>
-							<Grid item xs={6}>
-								<h5>Price :</h5>
-							</Grid>
-							<Grid item xs={6}>
-								<h5>{props.price}</h5>
-							</Grid>
-						</Grid>
-					</Typography>
+          <Typography gutterBottom>
+            <Grid container spacing={1}>
+              <Grid item xs={6}>
+                <h5>Price :</h5>
+              </Grid>
+              <Grid item xs={6}>
+                <h5>{props.price}</h5>
+              </Grid>
+            </Grid>
+          </Typography>
 
-					<Typography gutterBottom>
-						<Grid container spacing={1}>
-							<Grid item xs={6}>
-								<h5>Food Taste :</h5>
-							</Grid>
-							<Grid item xs={6}>
-								<RaitingFood />
-							</Grid>
-						</Grid>
-					</Typography>
+          <Typography gutterBottom>
+            <Grid container spacing={1}>
+              <Grid item xs={6}>
+                <h5>Food Taste :</h5>
+              </Grid>
+              <Grid item xs={6}>
+                <RaitingFood />
+              </Grid>
+            </Grid>
+          </Typography>
 
-					<Typography gutterBottom>
-						<Grid container spacing={1}>
-							<Grid item xs={6}>
-								<h5>Delivery Time :</h5>
-							</Grid>
-							<Grid item xs={6}>
-								<RaitingDelivery />
-							</Grid>
-						</Grid>
-					</Typography>
+          <Typography gutterBottom>
+            <Grid container spacing={1}>
+              <Grid item xs={6}>
+                <h5>Delivery Time :</h5>
+              </Grid>
+              <Grid item xs={6}>
+                <RaitingDelivery />
+              </Grid>
+            </Grid>
+          </Typography>
 
-					<Typography gutterBottom>
-						<Grid container spacing={1}>
-							<Grid item xs={6}>
-								<h5>Menu Options :</h5>
-							</Grid>
-							<Grid item xs={6}>
-								<RaitingMenu />
-							</Grid>
-						</Grid>
-					</Typography>
-				</DialogContent>
-				<DialogActions>
-					<Button autoFocus onClick={handleClose} color="primary">
-						Save changes
-					</Button>
-				</DialogActions>
-			</Dialog>
-		</div>
-	);
+          <Typography gutterBottom>
+            <Grid container spacing={1}>
+              <Grid item xs={6}>
+                <h5>Menu Options :</h5>
+              </Grid>
+              <Grid item xs={6}>
+                <RaitingMenu />
+              </Grid>
+            </Grid>
+          </Typography>
+        </DialogContent>
+        <DialogActions>
+          <Button autoFocus onClick={handleClose} color="primary">
+            Save changes
+          </Button>
+        </DialogActions>
+      </Dialog>
+    </div>
+  );
 }

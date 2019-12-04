@@ -42,8 +42,18 @@
 
 .orders-list-item{
     width: 80%;
-    border: 1px solid black;
+    /* border: 2.5px solid rgba(255,65,54,0.85); */
     margin-right: auto;
     margin-left: auto;
-    border-radius: 10px;
+	border-radius: 10px;
+	height: 8rem;
+	/* font-weight: bold; */
+	color: white;
+	background-color: #424242;
+	padding: 2px;
 }
+
+.details-button{
+	margin: 2rem;
+}
+
