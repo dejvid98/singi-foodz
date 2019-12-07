@@ -89,7 +89,7 @@ export default function Order(props) {
                 );
               })}
             </div>
-            <div className="checkout-button">
+            <div className="checkout-button" onClick={handleCheckout}>
               <Fab
                 variant="extended"
                 color="secondary"
