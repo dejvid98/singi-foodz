@@ -40,6 +40,8 @@ export default function Reviews() {
               ) : null}
               {unreviewedListState.length >= 1
                 ? unreviewedListState.map((order, index) => {
+                    const date = order[index].date;
+                    const dateSring = date.toString();
                     return (
                       <div className="orders-list-item">
                         <Grid container spacing={1} id={index}>
@@ -47,10 +49,10 @@ export default function Reviews() {
                             Restaurant :{order[index].restaurant}
                           </Grid>
                           <Grid item xs={12}>
-                            Date : {order[index].date}
+                            Date : {dateSring.substring(0, 9)}
                           </Grid>
                           <Grid item xs={12} className="reviewitem">
-                            Time : {order[index].tajm}
+                            Time : {dateSring.substring(10, 20)}
                           </Grid>
                           <Grid item xs={12}>
                             <ReviewModal

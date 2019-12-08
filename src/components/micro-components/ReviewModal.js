@@ -65,7 +65,6 @@ export default function CustomizedDialogs(props) {
         setOpen(false);
         props.handleReview();
 	};
-
 	return (
     <div>
       <Button variant="contained" color="secondary" onClick={handleClickOpen} className='details-button'>
