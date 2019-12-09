@@ -33,8 +33,7 @@ export default function Order(props) {
         name,
         price,
         quantity,
-        date: new Date().toLocaleDateString(),
-        tajm: new Date().toLocaleTimeString()
+        date: new Date().toLocaleString()
       }
     ]);
   };
