@@ -52,7 +52,7 @@ export default function Reviews() {
                             Date : {dateSring.substring(0, 9)}
                           </Grid>
                           <Grid item xs={12} className="reviewitem">
-                            Time : {dateSring.substring(10, 23)}
+                            Time : {dateSring.substring(11, 23)}
                           </Grid>
                           <Grid item xs={12}>
                             <ReviewModal

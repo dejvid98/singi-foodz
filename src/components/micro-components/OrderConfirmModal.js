@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
@@ -9,7 +8,6 @@ import Paper from "@material-ui/core/Paper";
 import Fab from "@material-ui/core/Fab";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import { Link } from "react-router-dom";
-import ContinueIcon from "../../Assets/Icons/chevron-right-solid.svg";
 
 function PaperComponent(props) {
   return <Paper {...props} />;
