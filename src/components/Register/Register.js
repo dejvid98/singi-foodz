@@ -54,7 +54,7 @@ const Register = (props) => {
 							next={'/register2'}
 							buttonName="Continue"
 							isntLast={true}
-							style={{ borderRadius: '8rem' }}
+							style={{ borderRadius: '8rem' }} 
 						/>
 					</form>
 				</div>
@@ -62,5 +62,6 @@ const Register = (props) => {
 		</div>
 	);
 };
+
 
 export default Register;

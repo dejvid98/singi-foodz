@@ -8,7 +8,7 @@ class Header extends Component {
     return (
       <div>
         <img src={Background} id="photo" alt="" className="img" />
-        <div className="container">
+        <div className="containerr">
           <div className="title-box">
             <h1 className="title">SingiFoodz</h1>
           </div>

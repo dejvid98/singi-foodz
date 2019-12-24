@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <div>
       <Link className="menu" to='/home'><HomeIcon/><span className='text'>HOME</span></Link>
-      <Link className="menu" to='/restaurants'><RestaurantIcon/><span className='text'>RESTAURANTS</span></Link>
+      <Link className="menu" to='/restaurants/pizza'><RestaurantIcon/><span className='text'>RESTAURANTS</span></Link>
       <Link className="menu" to='/reviews'><RateReviewIcon/> <span className='text'>REVIEWS</span></Link>
       <Link className="menu" to='/profile'><AccountCircleIcon/> <span className='text'>PROFILE</span></Link>
 
