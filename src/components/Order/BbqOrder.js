@@ -90,7 +90,7 @@ export default function Order(props) {
                 : null}
             </div>
             <div className="checkout-button">
-              <OrderConfirm onClick={handleCheckout}/>
+              <OrderConfirm onClick={handleCheckout} />
             </div>
           </Grid>
           <Grid item xs={8}>
