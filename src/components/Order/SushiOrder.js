@@ -5,8 +5,7 @@ import Header from "../Home/Header";
 import Footer from "../Home/Footer";
 import MenuItem from "./MenuItem";
 import Grid from "@material-ui/core/Grid";
-import Fab from "@material-ui/core/Fab";
-import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import OrderConfirm from "../micro-components/OrderConfirmModal";
 import MenuItem1 from "../../Assets/SushiMenu/1.jfif";
 import MenuItem2 from "../../Assets/SushiMenu/2.jfif";
 import MenuItem3 from "../../Assets/SushiMenu/3.jfif";
@@ -33,7 +32,7 @@ export default function Order(props) {
         name,
         price,
         quantity,
-        date: new Date().toLocaleString(),
+        date: new Date().toLocaleString()
       }
     ]);
   };
@@ -87,22 +86,8 @@ export default function Order(props) {
                 );
               })}
             </div>
-            <div className="checkout-button" onClick={handleCheckout}>
-              <Fab
-                variant="extended"
-                color="secondary"
-                className="checkout-button"
-              >
-                <div
-                  style={{
-                    paddingLeft: "35px",
-                    paddingRight: "35px"
-                  }}
-                >
-                  <ShoppingCartIcon />
-                  Checkout
-                </div>
-              </Fab>
+            <div className="checkout-button">
+              <OrderConfirm onClick={handleCheckout} />
             </div>
           </Grid>
           <Grid item xs={8}>
