@@ -1,4 +1,6 @@
 .containerr {
+  display: flex;
+  flex-direction: column;
   margin-right: auto;
   margin-left: auto;
   max-width: 1130px;
@@ -46,8 +48,8 @@
 }
 
 .menu {
-  padding-left: 5.5rem;
-  padding-right: 5.5rem;
+  padding-left: 5.58rem;
+  padding-right: 5.58rem;
   padding-top: 10px;
   padding-bottom: 7px;
   background-color: #ffdc00;
